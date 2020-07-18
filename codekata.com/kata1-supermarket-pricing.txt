@@ -1,0 +1,22 @@
+kata: http://codekata.com/kata/kata01-supermarket-pricing/
+
+item struct {
+	price float32;
+	deals deal[];
+}
+
+deal struct {
+	numItems int32;
+	discountPercentage float32;
+}
+
+complex pricing: calculating three for a dollar scenario
+	- maintain map of items to numItems (called itemCounts) during checkout process
+	- as new item is scanned
+		- increment count for item in map
+		- foreach deal for item
+			- if itemCounts[item] % numItems = 0
+				- subtract price * numItems from total
+				- add discounted price * numItems to total
+
+model handles case when you buy 4 or 5 because we only apply discounts in multiples of deal.numItems
