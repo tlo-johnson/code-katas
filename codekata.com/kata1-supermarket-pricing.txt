@@ -1,11 +1,11 @@
 kata: http://codekata.com/kata/kata01-supermarket-pricing/
 
-item struct {
+type item struct {
 	price float32;
 	deals deal[];
 }
 
-deal struct {
+type deal struct {
 	numItems int32;
 	discountPercentage float32;
 }
