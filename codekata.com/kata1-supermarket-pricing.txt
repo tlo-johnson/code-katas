@@ -1,5 +1,20 @@
 kata: http://codekata.com/kata/kata01-supermarket-pricing/
 
+-------------------
+Date: July 20, 2020
+-------------------
+URL: https://sequencediagram.org/
+Source Text:
+title Supermarket Pricing
+
+Clerk -> Register:clerk scans an item
+Register -> Cart : item added
+Cart -> Price Calc: calculate price for item
+Cart -> Register : total cost
+
+-------------------
+Date: July 18, 2020
+-------------------
 type item struct {
 	price float32;
 	deals deal[];
