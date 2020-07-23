@@ -1,6 +1,32 @@
 kata: http://codekata.com/kata/kata01-supermarket-pricing/
 
 -------------------
+Date: July 23, 2020
+-------------------
+Model 1
+- Each item has a discount associated with it. A discount is comprised of the number of items required for the discount to apply and the percentage reduction (i.e. when a cart has x number of items, apply y% discount). Applying the discount involves removing the cost of x items from the total and then adding the cost of x items less y% to the total. A discount is only applied if the number of items in the cart are a multiple of the number of items required for the discount.
+
+- simple price scenario
+	- item has a base price and there are no discounts.
+
+- three for a dollar scenario
+	- item has a base price, say $0.45.
+	- item has a discount of 26% when 3 items are purchased.
+	- when you buy 4 or 5 items, the model just works - you are discounted for the 3 of the 4/5 items you buy.
+
+cons
+- can be difficult to understand what discounts are applied because we think in terms of dollars not percentages
+	- e.g. when you look at the three for a dollar scenario, a discount of 26% when 3 items are purchased doesn't immediately strike you as 3 for a dollar
+	- e.g. if I said you get a discount of 37% when you purchase 6 items, what does that really mean? understanding it involves significant math
+
+- rounding can introduce errors
+	- in the case of three for a dollar, applying the discount of 26% does not give you exactly $1 - it gives $0.999. sure, when rounded it is a dollar but this is an opportunity for errors to be introduced into the system.
+
+
+- Model 2
+apply discounts in $$ not in percentages
+
+-------------------
 Date: July 20, 2020
 -------------------
 URL: https://sequencediagram.org/
